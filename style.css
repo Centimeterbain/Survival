@@ -1,0 +1,191 @@
+/*  
+* {
+    border: solid 1px red;
+  } 
+*/
+html,
+body {
+  z-index: "0";
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+strong{
+  color:white;
+  font-size:23px;
+}
+
+.bgp{
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:-999;
+}
+.bgp img{
+  min-height:100%;
+  min-width:1000px;
+  width:100%;
+}
+@media screen and (max-width: 1000px) {
+   img.bgp {
+     left: 50%;
+     margin-left: -500px;}}
+
+
+#survial {
+  position: relative;
+  overflow: hidden; 
+}
+#survial .bg {
+  z-index: "1";
+  width: 100%;
+  height: auto;
+}
+
+
+
+.title{
+  position: absolute;
+  top:-20%;
+  right:0;
+  z-index: "3";
+  opacity: 0;
+  overflow: hidden;
+  /*動畫設定*/
+  animation-name: title;
+  animation-duration: 5s;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+  }
+
+
+#survial .cloudr {
+  position: absolute;
+  bottom: -5%;
+  left: -25%;
+  width: 150%;
+  z-index: "5";
+  overflow: hidden;
+  /*動畫設定*/
+  animation-name: cloudrmoving;
+  animation-duration: 7s;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+}
+#survial .cloudl {
+  position: absolute;
+  bottom: -5%;
+  right: -30%;
+  width: 140%;
+  z-index: "6";
+  overflow: hidden;
+  /*動畫設定*/
+  animation-name: cloudlmoving;
+  animation-duration: 7s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+
+.bgstory {
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+h1 {
+  margin: 0px auto;
+  text-align: center;
+}
+
+
+/*內容區開頭*/
+#other {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.down{
+  width:100%;
+  top:0px;
+}
+.bookpng{
+  width:100%;
+  top:0px;
+}
+.bookpng:hover{
+  content:url("https://centimeterbain.github.io/survivalWeb/book.gif");
+}
+.cardpng{
+  width:100%;
+  top:0px;
+}
+.cardpng:hover{
+  content:url("https://centimeterbain.github.io/survivalWeb/card.gif");
+}
+.talkpng{
+  width:100%;
+  top:0px;
+}
+.talkpng:hover{
+  content:url("https://centimeterbain.github.io/survivalWeb/dialogbox.gif");
+}
+#other .story{
+  margin-right:5px;
+  margin-top:30px;
+  width:30%;
+  display:flex;
+  flex-direction:column;
+  flex-wrap:warp;
+  align-items: center;
+}
+/*內容區結尾*/
+
+
+
+
+/*Css動畫區開頭*/
+
+@keyframes cloudlmoving {
+  0% {
+    margin-right: 8%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    margin-right: 80%;
+    opacity: 0;
+  }
+}
+
+@keyframes cloudrmoving {
+  0% {
+    margin-left: 8%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    margin-left: 80%;
+    opacity: 0;
+  }
+}
+
+@keyframes title {
+  0% {
+    margin-top:-15%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/*Css動畫區結尾*/
